@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://d0jmwhc2bfj6f"]
+
+[ext_resource type="Script" uid="uid://bifjxygbav3ck" path="res://Levels/scripts/player_spawn.gd" id="1_lyuil"]
+[ext_resource type="Texture2D" uid="uid://c4q7ridnjxd3a" path="res://player/sprites/vamp_spritesheet.png" id="1_y6scc"]
+
+[node name="PlayerSpawn" type="Node2D" unique_id=465133667]
+script = ExtResource("1_lyuil")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=913109353]
+modulate = Color(0.2852, 0.62, 0.29636, 0.8509804)
+position = Vector2(0, -25)
+texture = ExtResource("1_y6scc")
+hframes = 9
+vframes = 3

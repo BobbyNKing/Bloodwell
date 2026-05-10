@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://66x84tnmunm0"]
+
+[ext_resource type="Texture2D" uid="uid://ch68okljts5ii" path="res://props/sprites/Props.png" id="1_2ici7"]
+[ext_resource type="Script" uid="uid://b76jcl0bv08bm" path="res://props/material/plant.gd" id="1_e0gmo"]
+[ext_resource type="PackedScene" uid="uid://dfx4va8142l2e" path="res://GeneralNodes/HitBox/hitbox.tscn" id="2_e0gmo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yfywm"]
+size = Vector2(34, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0gmo"]
+size = Vector2(24, 18)
+
+[node name="Plant01" type="Node2D" unique_id=324482426]
+position = Vector2(0, -9)
+script = ExtResource("1_e0gmo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=744119228]
+texture = ExtResource("1_2ici7")
+hframes = 16
+vframes = 3
+
+[node name="HitBox" parent="." unique_id=1331409527 instance=ExtResource("2_e0gmo")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1293220324]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_yfywm")
+debug_color = Color(0.7893067, 0.418868, 0.2720443, 0.41960785)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=465007128]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1326493332]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_e0gmo")
