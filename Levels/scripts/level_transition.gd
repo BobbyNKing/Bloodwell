@@ -11,7 +11,7 @@ enum SIDE { LEFT, RIGHT, TOP, BOTTOM }
 
 @export var side: SIDE = SIDE.LEFT :
 	set( _v ):
-		size = _v
+		side = _v
 		_update_area()
 @export var snap_to_grid : bool = false :
 	set ( _v ):
@@ -37,7 +37,7 @@ func _ready() -> void:
 	
 	await LevelManager.level_loaded
 	
-	await get_tree().create_timer(2).timeout
+	#await get_tree().create_timer(2).timeout
 	monitoring = true
 	
 	body_entered.connect( _player_entered )
@@ -68,7 +68,7 @@ func get_offset() -> Vector2:
 			offset.x *= -1
 	else: 
 		offset.x = player_pos.x - global_position.x
-		offset.y = 16
+		offset.y = 32
 		if side == SIDE.TOP: 
 			offset.y *= -1
 	

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://nggxcj57lqug"]
+
+[ext_resource type="Script" uid="uid://cqvwcgxeam7si" path="res://Items/item_effects/item_effect.gd" id="1_eu55q"]
+[ext_resource type="Script" uid="uid://nklj4fvw7wu3" path="res://Items/Scripts/item_data.gd" id="1_hw0jr"]
+[ext_resource type="Texture2D" uid="uid://bnd6wn04pa6n8" path="res://Items/Sprites/items.png" id="2_5vqjr"]
+[ext_resource type="Script" uid="uid://c3hfhk6iaetg2" path="res://Items/item_effects/item_effect_heal.gd" id="2_pw2eo"]
+[ext_resource type="AudioStream" uid="uid://bm0n5omj6n63k" path="res://Items/item_effects/hp-up.wav" id="3_pw2eo"]
+
+[sub_resource type="Resource" id="Resource_yhh2t"]
+script = ExtResource("2_pw2eo")
+heal_amount = 2
+audio = ExtResource("3_pw2eo")
+metadata/_custom_type_script = "uid://c3hfhk6iaetg2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8xv6"]
+atlas = ExtResource("2_5vqjr")
+region = Rect2(32, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_hw0jr")
+name = "Blood"
+description = "Ah, sweet vitality."
+texture = SubResource("AtlasTexture_t8xv6")
+effects = Array[ExtResource("1_eu55q")]([SubResource("Resource_yhh2t")])

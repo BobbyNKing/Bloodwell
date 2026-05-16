@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bnybai56h7asv"]
+
+[ext_resource type="Script" uid="uid://nklj4fvw7wu3" path="res://Items/Scripts/item_data.gd" id="1_5ujwg"]
+[ext_resource type="Script" uid="uid://cqvwcgxeam7si" path="res://Items/item_effects/item_effect.gd" id="1_yq8b3"]
+[ext_resource type="Texture2D" uid="uid://bnd6wn04pa6n8" path="res://Items/Sprites/items.png" id="2_kvxp5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq8b3"]
+atlas = ExtResource("2_kvxp5")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+resource_name = "Gem"
+script = ExtResource("1_5ujwg")
+name = "Gem"
+description = "A valuable crystal, the humans are sure to like it."
+texture = SubResource("AtlasTexture_yq8b3")
